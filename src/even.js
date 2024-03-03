@@ -1,10 +1,5 @@
 import readlineSync from 'readline-sync';
-
-const getRandomInclusive = (min, max) => {
-  const bottom = Math.ceil(min);
-  const top = Math.floor(max);
-  return Math.floor(Math.random() * (top - bottom + 1) + bottom);
-};
+import getRandomInclusive from './random.js';
 
 const isEven = () => {
   const name = readlineSync.question('May I have your name? ');
