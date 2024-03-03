@@ -1,5 +1,4 @@
 import readlineSync from 'readline-sync';
-import name from './cli.js';
 
 const getRandomInclusive = (min, max) => {
   const bottom = Math.ceil(min);
@@ -8,6 +7,8 @@ const getRandomInclusive = (min, max) => {
 };
 
 const isEven = () => {
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   for (let i = 0; i < 3; i += 1) {
     const number = getRandomInclusive(0, 100);
@@ -17,18 +18,18 @@ const isEven = () => {
       console.log('Correct!');
     } else if (number % 2 !== 0 && answer === 'yes') {
       console.log('\'yes\' is wrong answer ;(. Correct answer was \'no\'.');
-      console.log('Let\'s try again, Bill!');
+      console.log(`Let's try again, ${name}!`);
       return;
     } else if (number % 2 === 0 && answer === 'no') {
       console.log('\'no\' is wrong answer ;(. Correct answer was \'yes\'.');
-      console.log('Let\'s try again, Bill!');
+      console.log(`Let's try again, ${name}!`);
       return;
     } else {
-      console.log('Let\'s try again, Bill!');
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }
-  console.log(`'Congratulations, ${name}'`);
+  console.log(`Congratulations, ${name}`);
 };
 
 export default isEven;
