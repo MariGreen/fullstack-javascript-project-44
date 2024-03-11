@@ -32,6 +32,6 @@ const count = () => {
   }
 };
 
-export default count();
+export default count;
 
 // игра калькулятор, логика
