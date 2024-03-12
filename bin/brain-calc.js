@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import count from '../src/games/calc.js';
+import getCount from '../src/games/calc.js';
 
-count();
+getCount();

@@ -1,31 +1,23 @@
 import readlineSync from 'readline-sync';
-import name from './user-name.js';
+import askAndGreeting from './cli.js';
 
-// логика всех игр
+const constractGame = (task, getTurnData) => {
+  const name = askAndGreeting();
+  const maxRounds = 3;
+  console.log(task);
+  for (let i = 0; i < maxRounds; i += 1) {
+    const [question, correctAnswer] = getTurnData();
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
+    // check(answer, correctAnswer);
+    if (answer === correctAnswer.toString()) {
+      console.log('Correct!');
+    } else {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\n Let's try again, ${name}!`);
+      return;
+    }
+  }
+  console.log(`Congratulations, ${name}!`);
+};
 
-// const check = (userAnswer, calcedValue) => {
-//   if (userAnswer === calcedValue) {
-//     console.log('Correct!');
-//     console.log(userAnswer);
-//     console.log(calcedValue);
-//   } else {
-//     console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${calcedValue}.\n Let's try again, ${name}!`);
-//   }
-// };
-
-// const constractGame = (task, getTurnData) => {
-//   const maxRounds = 3;
-//   // const name = readlineSync.question('May I have your name? ');
-//   // console.log(`Hello, ${name}!`);
-//   console.log(task);
-
-//   for (let i = 0; i < maxRounds; i += 1) {
-//     const [question, correctAnswer] = getTurnData;
-//     console.log(`Question: ${question}`);
-//     const answer = readlineSync.question('Your answer: ');
-//     check(answer, correctAnswer);
-//   }
-//   console.log(`Congratulations, ${name}`);
-// };
-
-// export default constractGame;
+export default constractGame;
