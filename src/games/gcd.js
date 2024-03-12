@@ -3,12 +3,14 @@ import constractGame from '../index.js';
 
 const getTurnData = () => {
   const firstNumber = getRandomInclusive(-100, 100);
-  const secondNumber = getRandomInclusive(-100, 100);
+  const secondNumber = getRandomInclusive(0, 1);
   const question = `${firstNumber} and ${secondNumber}`;
   const dividers = [];
-  const limit = Math.min(Math.abs(firstNumber), Math.abs(secondNumber));
   let correctAnswer = 0;
-  for (let i = 0; i <= limit; i += 1) {
+  const limit = Math.min(Math.abs(firstNumber), Math.abs(secondNumber));
+  if (limit === 0) {
+    return [question, correctAnswer];
+  } for (let i = 0; i <= limit; i += 1) {
     if (firstNumber % i === 0 && secondNumber % i === 0) {
       dividers.push(i);
     }
