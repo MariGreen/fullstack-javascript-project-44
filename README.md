@@ -10,3 +10,5 @@
 [![asciicast](https://asciinema.org/a/JpRHKvtLRzy47lfxLMLroSmg6.svg)](https://asciinema.org/a/JpRHKvtLRzy47lfxLMLroSmg6)
 ##### Progression game (8-th step)
 [![asciicast](https://asciinema.org/a/h4ThiOEVZ9oUKrEU444mYIDf0.svg)](https://asciinema.org/a/h4ThiOEVZ9oUKrEU444mYIDf0)
+##### Is it prime? (9-th step)
+[![asciicast](https://asciinema.org/a/9Udsy6hzoiWRNcinjMILBeoJF.svg)](https://asciinema.org/a/9Udsy6hzoiWRNcinjMILBeoJF)
