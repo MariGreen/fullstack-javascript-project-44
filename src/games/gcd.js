@@ -3,7 +3,7 @@ import constractGame from '../index.js';
 
 const getTurnData = () => {
   const firstNumber = getRandomInclusive(-100, 100);
-  const secondNumber = getRandomInclusive(0, 1);
+  const secondNumber = getRandomInclusive(-10, 10);
   const question = `${firstNumber} and ${secondNumber}`;
   const dividers = [];
   let correctAnswer = 0;

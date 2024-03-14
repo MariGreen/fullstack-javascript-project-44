@@ -7,13 +7,10 @@ const getTurnData = () => {
   const start = getRandomInclusive(1, 100);
   const rowLong = getRandomInclusive(5, 10);
   const step = getRandomInclusive(2, 9);
-  const finish = start + (rowLong * step);
   const randomIndex = getRandomInclusive(0, rowLong - 1);
   const correctAnswer = start + step * randomIndex;
-  for (let i = start; i < finish; i += step) {
-    if (numberRow.length < rowLong) {
-      numberRow.push(i.toString());
-    }
+  for (let i = start; numberRow.length < rowLong; i += step) {
+    numberRow.push(i.toString());
   } numberRow.splice(randomIndex, 1, '..');
   question = numberRow.join(' ');
   return [question, correctAnswer];
