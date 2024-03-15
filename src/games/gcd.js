@@ -4,7 +4,7 @@ import constractGame from '../index.js';
 const getTurnData = () => {
   const firstNumber = getRandomInclusive(1, 100);
   const secondNumber = getRandomInclusive(1, 10);
-  const question = `${firstNumber} and ${secondNumber}`;
+  const question = `${firstNumber} ${secondNumber}`;
   const dividers = [];
   let correctAnswer = 0;
   const limit = Math.min(firstNumber, secondNumber);
