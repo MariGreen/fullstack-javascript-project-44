@@ -2,8 +2,8 @@ import getRandomInclusive from '../utilits.js';
 import constractGame from '../index.js';
 
 const getTurnData = () => {
-  const firstNumber = getRandomInclusive(1, 100);
-  const secondNumber = getRandomInclusive(1, 10);
+  const firstNumber = Math.abs(getRandomInclusive(-100, 100));
+  const secondNumber = Math.abs(getRandomInclusive(-10, 10));
   const question = `${firstNumber} ${secondNumber}`;
   const dividers = [];
   let correctAnswer = 0;
