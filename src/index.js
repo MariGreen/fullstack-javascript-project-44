@@ -10,7 +10,6 @@ const constractGame = (task, getTurnData) => {
     const [question, correctAnswer] = getTurnData();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    // check(answer, correctAnswer);
     if (answer === correctAnswer.toString()) {
       console.log('Correct!');
     } else {
