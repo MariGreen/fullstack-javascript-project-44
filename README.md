@@ -1,44 +1,46 @@
 ## Brain games
-Приложение содержит 5 мини-игр с математическими заданиями: определение простого числа, определение чётности числа, выполнение простейших арифметических действий, поиск наибольшего общего делителя двух чисел и поиск пропавшего элемента в арифметической прогрессии.
-Победа: три правильных ответа подряд.
+The application contains 5 mini-games with mathematical tasks: finding a prime number, finding the parity of a number, performing simple arithmetic operations, finding the greatest common divisor of two numbers and finding the missing element in an arithmetic progression.
+Victory: three correct answers in a row.
 
-Системные требования: Минимальные (ПК, доступ в интернет)
+System requirements: Minimum (PC, Internet access)
 
-Установка: ```make npm ci```
-Запуск: ```make run```
+Install the program: 
+```git clone https://github.com/MariGreen/fullstack-javascript-project-44.git```
+```make npm ci```
+Run: ```make run```
 
-### Чёт-нечёт
-Запуск: 
+### Even-odd
+Run: 
 ```make even-odd```
 ##### preview
 [![asciicast](https://asciinema.org/a/a5QmGwTu3Ml5UQmriBL3h4yyp.svg)](https://asciinema.org/a/a5QmGwTu3Ml5UQmriBL3h4yyp)
 
 
-### Калькулятор
-Запуск: 
+### Calculator
+Run: 
 ```make calculate```
 ##### preview
 [![asciicast](https://asciinema.org/a/UqfUfhYXNwUqgXlC3EUQ32ZzG.svg)](https://asciinema.org/a/UqfUfhYXNwUqgXlC3EUQ32ZzG)
 
-### Наибольший общий делитель
-Запуск: 
+### Greatest common divisor
+Run: 
 ```make gcd```
 ##### preview
 [![asciicast](https://asciinema.org/a/JpRHKvtLRzy47lfxLMLroSmg6.svg)](https://asciinema.org/a/JpRHKvtLRzy47lfxLMLroSmg6)
 
-### Прогрессия
-Запуск: 
+### Progression
+Run: 
 ```make progression```
 ##### preview
 [![asciicast](https://asciinema.org/a/h4ThiOEVZ9oUKrEU444mYIDf0.svg)](https://asciinema.org/a/h4ThiOEVZ9oUKrEU444mYIDf0)
 
-### Простое число
-Запуск: 
+### Prime number
+Run: 
 ```make prime```
 ##### preview
 [![asciicast](https://asciinema.org/a/9Udsy6hzoiWRNcinjMILBeoJF.svg)](https://asciinema.org/a/9Udsy6hzoiWRNcinjMILBeoJF)
 
-#### Удачи!
+#### Good luck!
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/MariGreen/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/MariGreen/fullstack-javascript-project-44/actions)

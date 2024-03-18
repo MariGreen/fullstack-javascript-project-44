@@ -33,5 +33,3 @@ const getCount = () => {
 };
 
 export default getCount;
-
-// игра калькулятор, логика

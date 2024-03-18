@@ -1,9 +1,10 @@
 import readlineSync from 'readline-sync';
 import askAndGreeting from './cli.js';
 
+const maxRounds = 3;
+
 const constractGame = (task, getTurnData) => {
   const name = askAndGreeting();
-  const maxRounds = 3;
   console.log(task);
   for (let i = 0; i < maxRounds; i += 1) {
     const [question, correctAnswer] = getTurnData();

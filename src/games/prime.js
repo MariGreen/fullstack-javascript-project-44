@@ -27,5 +27,3 @@ const isPrime = () => {
 };
 
 export default isPrime;
-
-// найди простое число, логика

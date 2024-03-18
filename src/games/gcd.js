@@ -24,5 +24,3 @@ const setMaxDivisor = () => {
 };
 
 export default setMaxDivisor;
-
-// найди наибольший общий делитель, логика

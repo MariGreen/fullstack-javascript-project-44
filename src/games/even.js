@@ -13,5 +13,3 @@ const isEven = () => {
 };
 
 export default isEven;
-
-// игра чет-нечет, логика

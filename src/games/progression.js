@@ -22,5 +22,3 @@ const getNumberRow = () => {
 };
 
 export default getNumberRow;
-
-// игра прогрессия, логика
