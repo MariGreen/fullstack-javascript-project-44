@@ -6,9 +6,10 @@ const getTurnData = () => {
   const secondNumber = Math.abs(getRandomInclusive(-10, 10));
   const question = `${firstNumber} ${secondNumber}`;
   const dividers = [];
-  let correctAnswer = 0;
+  let correctAnswer;
   const limit = Math.min(firstNumber, secondNumber);
   if (limit === 0) {
+    correctAnswer = firstNumber || secondNumber;
     return [question, correctAnswer];
   } for (let i = 0; i <= limit; i += 1) {
     if (firstNumber % i === 0 && secondNumber % i === 0) {
