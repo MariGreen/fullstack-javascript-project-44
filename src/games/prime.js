@@ -14,7 +14,7 @@ const isPrime = (number) => {
 const getTurnData = () => {
   const number = getRandomInclusive(2, 213);
   const question = number;
-  const correctAnswer = isPrime() ? 'no' : 'yes';
+  const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
