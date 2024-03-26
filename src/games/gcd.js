@@ -1,21 +1,17 @@
 import getRandomInclusive from '../utilits.js';
 import constractGame from '../index.js';
 
+const getGcd = (num1, num2) => {
+  if (num1 === 0) {
+    return num2;
+  } return getGcd(num2 % num1, num1);
+};
+
 const getTurnData = () => {
   const firstNumber = Math.abs(getRandomInclusive(-100, 100));
   const secondNumber = Math.abs(getRandomInclusive(-10, 10));
   const question = `${firstNumber} ${secondNumber}`;
-  const dividers = [];
-  let correctAnswer;
-  const limit = Math.min(firstNumber, secondNumber);
-  if (limit === 0) {
-    correctAnswer = firstNumber || secondNumber;
-    return [question, correctAnswer];
-  } for (let i = 0; i <= limit; i += 1) {
-    if (firstNumber % i === 0 && secondNumber % i === 0) {
-      dividers.push(i);
-    }
-  } correctAnswer = dividers[dividers.length - 1];
+  const correctAnswer = getGcd(firstNumber, secondNumber);
   return [question, correctAnswer];
 };
 

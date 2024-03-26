@@ -1,18 +1,23 @@
 import getRandomInclusive from '../utilits.js';
 import constractGame from '../index.js';
 
+const generateProgression = (start, step, length) => {
+  const progression = [];
+  for (let i = 0; i < length; i += 1) {
+    progression.push(start + step * i);
+  }
+  return progression;
+};
+
 const getTurnData = () => {
-  const numberRow = [];
-  let question = '';
   const start = getRandomInclusive(1, 100);
   const rowLong = getRandomInclusive(5, 10);
   const step = getRandomInclusive(2, 9);
   const randomIndex = getRandomInclusive(0, rowLong - 1);
-  const correctAnswer = start + step * randomIndex;
-  for (let i = start; numberRow.length < rowLong; i += step) {
-    numberRow.push(i.toString());
-  } numberRow.splice(randomIndex, 1, '..');
-  question = numberRow.join(' ');
+  const progression = generateProgression(start, step, rowLong);
+  const correctAnswer = progression[randomIndex];
+  progression[randomIndex] = '..';
+  const question = progression.join(' ');
   return [question, correctAnswer];
 };
 
